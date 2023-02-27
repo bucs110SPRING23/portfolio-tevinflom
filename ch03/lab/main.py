@@ -22,7 +22,7 @@ distance_from_center = math.hypot(x1-x2, y2-y1)
 is_in_circle = distance_from_center <= dimensions[0] // 2
 
 for _ in range(10):
-    hitspot = [randrange(0, dimensions[0]//2), randrange(0,dimensions[1]//2)]
+    hitspot = [random.randrange(0, dimensions[0]//2), random.randrange(0,dimensions[1]//2)]
     dart = pygame.draw.circle(screen, color, hitspot, 50)
     pygame.display.flip()
     pygame.time.wait(3000)
