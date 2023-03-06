@@ -44,7 +44,8 @@ while not done:
                  result.append("blue")
             elif hitboxes["purple"].collidepoint(event.pos):
                  result.append("purple")
-if 
+if turns == 0: 
+    
 #pygame.Rect    
 # -x and y coordinate
 # -width and height 
