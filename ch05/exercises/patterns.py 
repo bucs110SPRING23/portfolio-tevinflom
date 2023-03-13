@@ -11,4 +11,3 @@ x = input("number of rows: ")
 y = "*"
 
 
-

@@ -1,0 +1,55 @@
+def percentage_to_letter(percent = 99):
+    """
+    This is a function that returns the grade based on a percentage 
+    args : percent (int) 
+    return: letter (str) 
+    """ #this is called a docs string, it displays documentation before the function 
+    let = "A"
+    if 80 <= percent < 90:
+        let = "B"
+    elif 70 <= percent < 80: 
+        let = "C"
+    elif 60 <= percent < 70: 
+        let = "D"
+    elif percent < 60: 
+        let = "F"
+    return let 
+def is_passing(letter): #boolean function, is_ convention for naming 
+    return letter.lower() in ["A", "B", "C"] #.lower/ .upper makes a string all upper or lower case
+        
+def main(): #driver code, historically called main
+    #don't need docstring for main 
+    grades = [90,80,70,60,50]
+    for grade in grades: 
+        letter = percentage_to_letter(grade)
+        if is_passing(letter): 
+            print("you passed") 
+        else:
+            print("someone messed up your grades")
+
+# for loop - programming pattern 
+
+##  Programming Patterns ##
+
+##  accumulator pattern :
+#result = 0 
+
+for i in range (10): 
+    result = result + 1 
+print(result) 
+
+#General Form of Accumulator 
+#accumulator = start_value
+#for in in list: 
+    #accumulator = accumulator <operation>
+
+def remove_vowels(string): 
+    vowels = "aeiou"
+    vowels += vowels.upper()
+    result = ""
+    for ch in string: 
+        result += ch
+    return result
+def main(): 
+    mystring = "hello world"
+    print(remove_vowels(mystring))
