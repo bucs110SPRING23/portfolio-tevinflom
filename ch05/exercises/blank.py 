@@ -48,8 +48,10 @@ def remove_vowels(string):
     vowels += vowels.upper()
     result = ""
     for ch in string: 
-        result += ch
+        result = result + ch
     return result
 def main(): 
     mystring = "hello world"
-    print(remove_vowels(mystring))
+    mystring = remove_vowels(mystring)
+    print(mystring)
+main()
