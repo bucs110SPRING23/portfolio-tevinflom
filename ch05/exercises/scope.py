@@ -1,3 +1,5 @@
+x = int(input("enter a number: "))
+y = int(input("enter a number: "))
 
 def multiplier (x,y): 
     accumulator = 0 
@@ -15,13 +17,11 @@ def square(x):
     return multiplier(x, x) # x = x, y = x
 
 def main():
-    x = int(input("enter a number: "))
-    y = int(input("enter a number: "))
     result = multiplier (x, y) 
     print(result) 
     result = exponent (x, y) 
     print(result) 
-    result = square (x, y) 
+    result = square (x) 
     print(result) 
 
 main()
