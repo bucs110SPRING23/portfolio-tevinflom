@@ -2,11 +2,15 @@ import turtle as t
 import random 
 
 #Global Space
-fantasy = int(input("How many circular hats do you WANT Mr. Susmeister to Have? Enter an even number: "))
-reality  = int(input("How many circular hats should he realistically have? Enter an even number: "))
+fantasy = int(input("How many circular hats do you WANT Mr. Susmeister to Have? Enter a number: "))
+reality  = int(input("How many circular hats should he realistically have? Enter a number: "))
 
 def optimalhats(fantasy, reality):
-    ''' This function averages together what your creative side craves and what your logical side accepts is appropriate for the quantity of hats for Mr. Susmeister'''
+    ''' 
+    This function averages together what your creative side craves and what your logical side accepts is appropriate for the quantity of hats for Mr. Susmeister.
+    Args: (int) any 2 integers
+    Returns: (int) average of the 2 values as an integer without remainder 
+    '''
     return fantasy * reality // 2  
 
 def main(): 
@@ -59,6 +63,4 @@ def main():
         pen.pendown()
     screen.exitonclick() 
 
-
-#optimalhats(fantasy,reality)
 main()
