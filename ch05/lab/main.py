@@ -15,34 +15,15 @@ def threenp1(n):
         count += 1
     return count
 
-num = int (input("Enter a number: "))
-mypair = set() #creates a dictionary 
-
-def numchecker(num):
-    if num < 2 is True: 
-        newnum = num + 1
-    else:
-        newnum == num
-    return(newnum)
-
-def counter():
-    #num = int (input("Enter a number: "))
-    #for num in mypair: 
-       #if num < 2: 
-          #newnum = num - 1
-       #else:
-          #newnum = num
-    newnum = numchecker(num)
-    iterations = threenp1(newnum) 
-    print("Number of Iterations: ", iterations)
-    mypair.add((newnum, iterations))
-    return (newnum, iterations)
+mypair = set()
+def counter(): 
+    upper_limit = int(input("Define an Upper Limit: "))
+    for num in range(2, upper_limit):
+        count = threenp1(num)
+        print("Number of Iterations: ", counter)
+        mypair.add((num, count))
+    return(num, count) 
 
 while True: 
    counter()
    print(mypair)
-
-
-
-
- 
