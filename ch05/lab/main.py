@@ -24,6 +24,9 @@ def counter():
         mypair.add((num, count))
     return(num, count) 
 
-while True: 
-   counter()
-   print(mypair)
+def main():
+   while True: 
+      counter()
+      print(mypair) 
+
+main()
