@@ -1,1 +1,42 @@
-def caeser_cipher(): 
+import json 
+shift = [1, 3, 5, 7, 9] 
+text = "the quick brown fox jumped over the lazy dog"
+
+def caeser_cipher(text, shift):
+
+    """
+
+    args:
+        text:str = the message to encrypt or decrypt
+        shift:int = the number of positions to shift each letter
+    return:
+        :str = the encrypted or decrypted message
+    """
+    result = ""
+    for char in text:
+        if char.isalpha():
+        # Determine the case of the character
+            start = ord('A') if char.isupper() else ord('a')
+        # Calculate the new position of the character after the shift
+            for num in shift:
+                new_pos = (ord(char) - start + num) % 26
+                # Convert the new position back to a character
+                char = chr(start + new_pos)
+                result += char
+                print(result)
+    return result
+
+def main():
+   file_pointer = open("ch06/encripted.txt", "w")
+   result = caeser_cipher(text, shift)
+   results = []
+   results.append(result)
+   for i in results:
+       file_pointer.write(i)
+       file_pointer.close()
+       return None
+
+
+main()
+caeser_cipher("get a hat", shift)
+
