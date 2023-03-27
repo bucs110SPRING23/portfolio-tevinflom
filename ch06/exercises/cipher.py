@@ -1,7 +1,7 @@
 import json 
-shift = [1, 3, 5, 7, 9] 
+shift = 11
 text = "the quick brown fox jumped over the lazy dog"
-
+results = ""
 def caeser_cipher(text, shift):
 
     """
@@ -18,16 +18,16 @@ def caeser_cipher(text, shift):
         # Determine the case of the character
             start = ord('A') if char.isupper() else ord('a')
         # Calculate the new position of the character after the shift
-            for num in shift:
-                new_pos = (ord(char) - start + num) % 26
-                # Convert the new position back to a character
-                char = chr(start + new_pos)
-                result += char
-                print(result)
-    return result
+            new_pos = (ord(char) - start + shift) % 26
+            # Convert the new position back to a character
+            char = chr(start + new_pos)
+            result += char
+            results.append(result)
+            print(results)
+    return results
 
 def main():
-   file_pointer = open("ch06/encripted.txt", "w")
+   file_pointer = open("ch06/exercises/encripted.txt", "w")
    result = caeser_cipher(text, shift)
    results = []
    results.append(result)
