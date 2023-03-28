@@ -1,8 +1,8 @@
-import json 
+#import json 
 shift = 11
 text = "the quick brown fox jumped over the lazy dog"
-results = ""
-#file_pointer= open("encript.txt", "x")
+#results = ""
+#file_pointer= open("encript1.txt", "x")
 def caeser_cipher(text, shift):
 
     """
@@ -25,15 +25,16 @@ def caeser_cipher(text, shift):
             result += char
             #results.append(result)
             #print(results)
-    return results
+    return result
 
 def main():
-   file_pointer = open("ch06\exercises\encripted.txt", "w")
+   file_pointer = open("encripted.txt", "a")
    result = caeser_cipher(text, shift)
+   print(result)
    results = []
    results.append(result)
-   for i in results:
-       file_pointer.write(i)
+   for result in results:
+       file_pointer.write(result)
        file_pointer.close()
        print('done')
        return None
