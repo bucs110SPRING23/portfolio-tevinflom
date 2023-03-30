@@ -20,6 +20,7 @@ class LED:
     #####
 
     def random_color(self):
+        
         colors = ["green", "red", "yellow", "blue"]
         self.color = random.choice(colors)
         
